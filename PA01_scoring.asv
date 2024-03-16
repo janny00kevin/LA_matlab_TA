@@ -7,14 +7,12 @@ F = reshape(1:n^2, n, n)';
 n = 3;
 G = reshape(1:n^2, n, n)';
 I = eye(105);
-Y = G;
-Y(3,3) = 9.001;
 %           1  2      3  4  5  6  7  8  9
-testData = {A, Asamp, B, C, D, E, F, Y, I};
+testData = {A, Asamp, B, C, D, E, F, G, I};
 
+Y = []
 
-
-accuracy = 10;
+accuracy = 7;
 T = 100;
 runTime = zeros(1, T);
 for t = 1:T
