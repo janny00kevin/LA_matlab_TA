@@ -14,10 +14,10 @@ for t = 1:T
     tic;
     for i = 1:length(testData)
         try
-            answer = round(PA01_112511007_KaiTingWang(testData{i}), accuracy);
+            answer = round(GJinv(testData{i}), accuracy);
             soln = round(inv(testData{i}),accuracy);
             if isequal(answer, soln) && t == 1
-                disp(['Prob ', num2str(i), ': O'])
+                disp(['Prob ', num2str(i), ': O'])  
             elseif t == 1
                 disp(['Prob ', num2str(i), ': X'])
             end
